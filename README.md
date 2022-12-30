@@ -24,6 +24,8 @@ The following components were modified:
 - OPTIM.COM
 - ZAS.COM (starting from the Hector Peraza’s ZSM4 published on GitHub)
 
+The included .COM files are built to be used on RC2014 + SC108 hardware configuration.
+
 The resulting C toolset can be customized to be used on any available 128KB RAM Z80 hardware system configuration ( RC2014 provided with SC108, SC114, SC118 or the Phillip Stevens memory module, or any other configuration).
 
 The CP/M must be setup using the PutSys from the folder PutSys.
