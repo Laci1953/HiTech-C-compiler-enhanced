@@ -51,9 +51,9 @@ Z80AS will be executed, instead of ZAS, building the requested object code.
 
 Compared to HiTech's ZAS assembler, Z80AS has some advantages:
 
-can compile larger source files
-supports the undocumented Z80 instructions
-has more pseude operators (coonditionals, listing control)
-better MACRO facilities (REPT,IRP,IRPC,LOCAL)
-better support for expression evaluation, including extensive use of parantheses and well-defined operator precedence
+-can compile larger source files
+-supports the undocumented Z80 instructions
+-has more pseude operators (coonditionals, listing control)
+-better MACRO facilities (REPT,IRP,IRPC,LOCAL)
+-better support for expression evaluation, including extensive use of parantheses and well-defined operator precedence
 
