@@ -28,7 +28,7 @@ The included .COM files are built to be used on RC2014 + SC108 hardware configur
 
 The resulting C toolset can be customized to be used on any available 128KB RAM Z80 hardware system configuration ( RC2014 provided with SC108, SC114, SC118 or the Phillip Stevens memory module, or any other configuration).
 
-The CP/M must be setup using the PutSys from the folder PutSys.
+The CP/M must be setup using the PutSys from the folder PutSys. This is necessary because of the "shadow code", that must be stored to high RAM address space.
 
 The results are spectacular.
 
