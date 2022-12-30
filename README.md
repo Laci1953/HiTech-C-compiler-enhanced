@@ -26,6 +26,8 @@ The following components were modified:
 
 The resulting C toolset can be customized to be used on any available 128KB RAM Z80 hardware system configuration ( RC2014 provided with SC108, SC114, SC118 or the Phillip Stevens memory module, or any other configuration).
 
+The CP/M must be setup using the PutSys from the folder PutSys.
+
 The results are spectacular.
 
 Large C source files can now be compiled, without any problem (see the TESTS folder for some examples).
