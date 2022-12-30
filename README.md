@@ -15,6 +15,10 @@ This way, it is possible to “allocate” memory on the “upper” 64 KB RAM b
 
 Of course, this means that the C compiler code must be modified, in order to handle these “special” malloc calls.
 
+Obviously, this means some extra code is executed, compared to the "original" HiTech tools, resulting in a longer execution time.
+
+However, this loss of speed ( 10 to 15% ) is largely compensated by the big advantage obtained: to be able to compile larger C source files.
+
 Benefiting from the high quality work of Mark Ogden, who published the decompiled C sources on GitHub, I modified these source files to implement this ideea of a enhanced C compiler.
 
 The following components were modified:
