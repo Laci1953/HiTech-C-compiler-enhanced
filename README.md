@@ -31,3 +31,6 @@ The CP/M must be setup using the PutSys from the folder PutSys.
 The results are spectacular.
 
 Large C source files can now be compiled, without any problem (see the TESTS folder for some examples).
+
+The C compiler's modified source files are included.
+
