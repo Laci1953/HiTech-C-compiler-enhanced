@@ -36,7 +36,7 @@ int word_AFF8;            /* sub_2D09, sub_3564 */
 char byte_AFFA;           /* sub_283E, sub_2B79 */
 int word_AFFB;            /* sub_2D09, sub_35E6 */
 node_t *array_AFFD[0x14]; /* sub_3CDF, sub_3DC9 */
-/* void *nodeFreeList; */       /* sub_36E0, allocNode, releaseNodeFreeList */
+void *nodeFreeList;       /* sub_36E0, allocNode, releaseNodeFreeList */
 char bf1;
 bool byte_B013;           /* sub_36E0, allocNode, ... */
 char bf2;
