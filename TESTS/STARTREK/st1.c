@@ -1,6 +1,8 @@
 /*
  * startrek.c
  *
+ * Adapted for RC2014 by Ladislau Szilagyi 2023
+ *
  * Super Star Trek Classic (v1.1)
  * Retro Star Trek Game 
  * C Port Copyright (C) 1996  <Chris Nystrom>
