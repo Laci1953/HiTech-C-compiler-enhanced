@@ -1,0 +1,3 @@
+c -v -c -o st1.c
+c -v -c -o st2.c
+z80as xrnd
