@@ -9,5 +9,3 @@ opov2red.obj op31a.obj op31b.obj op31c.obj op31d.obj opctype1.obj opdata.obj opc
 link
 -z -X -N -dopovr3.sym -mopovr3.map -ptext=4000H/0,data -C0 -oop3.com \
 opov3red.obj opov3.obj op21a.obj optim1c.obj opctype1.obj opdata.obj opcomm.obj odynm512.obj oplibc.obj opbdefs.obj
-file2txt x.txt
-type download.txt
