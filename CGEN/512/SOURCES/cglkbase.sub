@@ -1,0 +1,7 @@
+xsub
+link
+-Z -X -N -Dcgbase.sym -Mcgbase.map -Ptext=100H,data,bss,top=4000H -C100h -Ocg512.com \
+cgcrtcpm.obj dynm512.obj cgenover.obj cgenlibc.obj  \
+cgenmain.obj cgsetup.obj ctype.obj cgdata0.obj cglex1.obj cglex2.obj
+symtoas cgbdefs.as cgbase.sym
+z80as cgbdefs

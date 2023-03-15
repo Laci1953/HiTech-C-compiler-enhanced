@@ -1,0 +1,17 @@
+xsub
+link
+-z -X -N -dcgovr1.sym -mcgovr1.map -ptext=4000H/0,data/ -C0 -ocg1.com \
+cgov1red.obj cgdata1.obj cgen2.obj cgsym2.obj cgsym3.obj cglocal2.obj cgbdefs.obj
+link
+-z -X -N -dcgovr2.sym -mcgovr2.map -ptext=4000H/0,data/ -C0 -ocg2.com \
+cgov2red.obj cglocal1.obj cgen1.obj cgen3.obj cgcode.obj cgsym1.obj \
+cgtree1.obj cgtree2.obj cgtree3.obj cgbdefs.obj
+link
+-z -X -N -dcgovr3.sym -mcgovr3.map -ptext=4000H/0,data/ -C0 -ocg3.com \
+cgov3red.obj cgov3.obj cgbdefs.obj
+era cgen.ov?
+ren cgen.ov1=cg1.com
+ren cgen.ov2=cg2.com
+ren cgen.ov3=cg3.com
+file2txt x.txt
+type download.txt
