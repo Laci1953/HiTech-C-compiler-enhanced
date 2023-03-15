@@ -8,9 +8,3 @@ ov2redir.obj p1expr.obj p1sym2.obj basedefs.obj
 link
 -z -X -N -dovr3.sym -movr3.map -ptext=4000H/0,data/ -C0 -op13.com \
 ov3redir.obj p1type.obj p1sym3.obj basedefs.obj
-era p1.ov?
-ren p1.ov1=p11.com
-ren p1.ov2=p12.com
-ren p1.ov3=p13.com
-file2txt x.txt
-type download.txt
