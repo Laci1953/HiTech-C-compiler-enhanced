@@ -1,0 +1,7 @@
+xsub
+link
+-Z -X -N -Dopbase.sym -Ptext=100H,data,bss,top -Ox.obj \
+opcrtcpm.obj opover.obj odynm512.obj oplibc.obj opbase.obj opbss.obj
+symtoas opbdefs.as opbase.sym
+z80as opbdefs
+era x.obj
