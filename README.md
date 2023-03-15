@@ -44,4 +44,10 @@ The C compiler's modified source files are included.
 
 The 128 folder contains files for 128KB RAM systems, the 512 folder contains files for 512KB RAM systems.
 
+For the 512KB version, code overlays are used.
+
+To create them from the HEX files, use the HEX2OVR program, included as a HEX file.
+Usage is: hex2ovr file (file.ovr will be created from file.hex)
+The extension part of the file need to be changed then to OV1, OV2 or OV3.
+
 
