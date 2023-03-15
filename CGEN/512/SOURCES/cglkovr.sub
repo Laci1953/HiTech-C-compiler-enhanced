@@ -9,9 +9,3 @@ cgtree1.obj cgtree2.obj cgtree3.obj cgbdefs.obj
 link
 -z -X -N -dcgovr3.sym -mcgovr3.map -ptext=4000H/0,data/ -C0 -ocg3.com \
 cgov3red.obj cgov3.obj cgbdefs.obj
-era cgen.ov?
-ren cgen.ov1=cg1.com
-ren cgen.ov2=cg2.com
-ren cgen.ov3=cg3.com
-file2txt x.txt
-type download.txt
