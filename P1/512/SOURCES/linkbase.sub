@@ -1,0 +1,7 @@
+xsub
+link
+-Z -X -N -Dbase.sym -Mbase.map -Ptext=100H,data,bss,top=4000H -C100h -Op1512.com \
+p1crtcpm.obj dynm512.obj overlays.obj p1libc.obj p1cclass.obj p1op.obj \
+p1main.obj p1sym.obj p1emit.obj p1hash.obj p1top.obj p1setup.obj 
+symtoas basedefs.as base.sym
+z80as basedefs
