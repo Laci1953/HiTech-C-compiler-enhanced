@@ -1,0 +1,61 @@
+Hardware requirements
+-------------------------------
+
+The improved HiTech C compiler works on any Z80-based system provided with one of the following RAM modules:
+
+- 128 KB RAM (SC108, SC114, SC118, SC150, SC152 or the Phillip Stevens’s memory module)
+
+- 512 KB RAM (512 KB RAM + 512 KB ROM Spencer Owen’s module)
+
+Software requirements
+------------------------------
+
+For the 128KB version, a customised CP/M is needed (one with a smaller BIOS). 
+
+Why is this a mandatory constraint? 
+Because it is vital for the C compiler to access the upper 64KB RAM in order to “gain” more available memory where to store its various data structures used by its routines.
+But, in order to access the upper 64KB RAM, a small piece of code must be stored in memory as high as possible, in both the lower and the upper 64KB RAM, at exactly the same address. 
+This “shadow” code will be responsible to move bytes between these two 64KB RAM partitions. 
+Unfortunately, the “official” BIOS delivered with the RC2014 is too big, “eating” all the available RAM space until the end of the physical 64K memory space. 
+Thus, no space is left for the “shadow” code.
+The only possible solution was to build a custom, smaller BIOS.
+
+You can find the customised CP/M’s here: https://github.com/Laci1953/HiTech-C-compiler-enhanced/tree/main/PutSys - the folder contains all the possible CP/M variants according to the needed serial type (SIO, KIO, ACIA) and CF size (64MB or 128MB).
+
+For the 512KB version, no CP/M customization is needed.
+
+One last remark: the 64MB CF’s CP/M is preferable because it allows a larger TPA ( 2 and half KB larger compared to the 128MB CF version, who “eats” more buffer space needed by the extra disk drives ... ) ; 
+
+Design details
+-------------------
+
+The customised HiTech C compiler components (P1, CGEN, OPTIM) use now two kinds of memory allocation routines: 
+- the classical “malloc”
+- the new memory allocation routine, allowing access to the extra RAM provided by the hadware
+
+For the 128KB version, a custom memory allocator was built (assembler). This made possible accessing an extra 64KB RAM area, compared to the “classic” TPA area.
+
+For the 512KB version, another memory allocator was built (assembler), allowing access to at least extra 256 KB RAM.
+For the 512KB version also a code overlay support module was built (assembler). The code overlays are stored on disk files, being read at start time and stored on specific 16KB RAM partitions; when called, the requested code overlay is loaded from its 16KB RAM partition to a fixed 16KB RAM internal buffer and executed there. This makes the overlay mechanism very efficient.
+
+Thus, the 512KB RAM space 16KB partitions are used to store allocated memory and code overlays.
+
+The 512KB version uses the following memory map model:
+
+0000H – 4000H	Base partition (code, data, bss + first memory heap area)
+4000H – 8000H	Overlay partition (code, data)
+8000H – C000H	Dynamic memory buffer (loaded with a 16KB RAM memory partition)
+C000H – FFFFH	Secondary memory heap area + stack + BDOS, BIOS
+
+Also, for the 512KB version, because it was important to gain as much free RAM as possible in TPA, a mechanism for “hiding” and “restoring” the HiTech $EXEC batch processor was implemented, gaining an extra 1 KB of memory.
+
+For both 128KB and 512KB versions, code was kept small also by using a special psect, named “top”, placed after the BSS psect; this “top” psect contains code that is executed only once, at initialization time, and then can be “dropped”, the “top” psect practically is being overwritten by subsequent malloc’s.
+
+Practical results
+---------------------
+
+Both the 128KB and 512KB HiTech C compiler custom versions outperform the old 64KB version, allowing to compile quite large C source files.
+
+See the TESTS folder for examples of large C source files that can now be compiled, but will fail with the old HiTech C compiler.
+
+
