@@ -57,5 +57,3 @@ Practical results
 Both the 128KB and 512KB HiTech C compiler custom versions outperform the old 64KB version, allowing to compile quite large C source files.
 
 See the TESTS folder for examples of large C source files that can now be compiled, but will fail with the old HiTech C compiler.
-
-
