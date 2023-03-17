@@ -8,7 +8,7 @@
 ;	512 KB RAM Dynamic Memory support
 
 DEBUG	equ	0
-OPTIM		equ	0	;1=optimize alloc speed, 0=do not optimize
+OPTIM		equ	1	;1=optimize alloc speed, 0=do not optimize
 TRACE		equ	0	;type function calls
 RCHECK		equ	0	;check virtual pointers
 ;
@@ -20,7 +20,7 @@ PORT		equ	7AH	;maps 8000H to C000H
 Buf16K		equ	8000H	;address of dynamic memory bank
 ENDIF
 
-BANKS_CNT	equ	8	;16 RAM banks of 16KB each are available (nr.48 to 63)
+BANKS_CNT	equ	16	;16 RAM banks of 16KB each are available (nr.48 to 63)
 ;
 ;Structure of the Virtual Pointer to allocated buffer (size = 10H to 4000H)
 ;
