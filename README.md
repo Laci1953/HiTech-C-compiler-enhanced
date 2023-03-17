@@ -51,7 +51,8 @@ For the 512KB version, code overlays are used.
 
 To create them from the HEX files, use the HEX2OVR program, included as a HEX file.
 
-Usage is: hex2ovr file 
+Usage is: >hex2ovr file 
+
 (file.ovr will be created from file.hex)
 
 Then, change the extension part of the file name to OV1, OV2 or OV3.
