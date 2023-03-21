@@ -1,0 +1,12 @@
+xsub
+link
+-z -X -N -dovr1.sym -movr1.map -ptext=4000H/0,data/ -C0 -op11.com \
+ov1redir.obj p1lex1.obj p1lex2.obj p1prog.obj p1stmt.obj p1sym1.obj basedefs.obj
+link
+-z -X -N -dovr2.sym -movr2.map -ptext=4000H/0,data/ -C0 -op12.com \
+ov2redir.obj p1expr1.obj p1expr2.obj p1sym2.obj basedefs.obj
+link
+-z -X -N -dovr3.sym -movr3.map -ptext=4000H/0,data/ -C0 -op13.com \
+ov3redir.obj p1type.obj p1sym3.obj basedefs.obj
+file2txt x.txt
+type download.txt
