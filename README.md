@@ -1,4 +1,4 @@
-# HiTech-C-compiler-enhanced - updated on April 4, 2023
+# HiTech-C-compiler-enhanced - updated on April 20, 2023
 Allowing the HiTech C compiler to be used on 128KB RAM / 512KB RAM hardware configurations
 
 The HiTech C Compiler v3.09 is one of the best available C compilers that can be used on 8-bit CP/M 2.2 systems.
@@ -9,7 +9,7 @@ In the same time, currently there are available a lot of Z80 based hardware conf
 
 This opens the possibility to “enhance” the capabilities of the C compiler, by allowing him to allocate memory in the extra RAM banks.
 
-For the 128KB RAM systems, this is possible only by keeping a small piece of code ( the “shadow” code) at the same address in both of the 64KB RAM banks, usually on the highest available address space; this code will be responsible with moving bytes from/to the two available 64KB RAM banks.
+For the 2 x 64KB RAM systems, this is possible only by keeping a small piece of code ( the “shadow” code) at the same address in both of the 64KB RAM banks, usually on the highest available address space; this code will be responsible with moving bytes from/to the two available 64KB RAM banks.
 
 This way, it is possible to “allocate” memory on the “upper” 64 KB RAM bank, in order to store there data for the C compiler.
 
@@ -32,7 +32,7 @@ The following components were modified:
 
 The included files are built to be used on Z80 sytems provided with SC108 (128KB RAM) or 512KB RAM modules hardware configuration.
 
-The resulting C toolset can be customized to be used on any available 128KB RAM / 512KB RAM Z80 hardware system configuration ( RC2014 provided with SC108, SC114, SC118, SC150, SC152 or the Phillip Stevens memory module, or the 512KB RAM + 512KB ROM module).
+The resulting C toolset can be customized to be used on any available 128KB RAM / 512KB RAM Z80 hardware system configuration ( RC2014 provided with SC108, SC114, SC118, SC150, SC152 or the Phillip Stevens memory module, or the 512KB RAM + 512KB ROM module, or Z80ALL (which has 4 x 32KB RAM)).
 
 For 128KB RAM systems, the CP/M must be setup using the PutSys from the folder PutSys. This is necessary because of the "shadow code", that must be stored to high RAM address space.
 
@@ -42,17 +42,6 @@ Large C source files can now be compiled, without any problem (see the TESTS fol
 
 The C compiler's modified source files are included.
 
-The 128 folder contains files for 128KB RAM systems, the 512 folder contains files for 512KB RAM systems.
 
-IMPORTANT
----------
 
-For the 512KB version, code overlays are used.
 
-To create them from the HEX files, use the HEX2OVR program, included as a HEX file.
-
-Usage is: >hex2ovr file 
-
-(file.ovr will be created from file.hex)
-
-Then, change the extension part of the file name to OV1, OV2 or OV3.
