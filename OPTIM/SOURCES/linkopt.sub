@@ -1,0 +1,6 @@
+xsub
+link
+ -Z -X -N -Moptimnew.map -Ptext=100H,data,bs,top -C100H -Ooptimnew.COM mycrtcpm.obj \
+ optim1a.obj optim1b.obj optim1c.obj optim1d.obj part21a.obj part21b.obj part21c.obj part21d.obj \
+ part31a.obj part31b.obj part31c.obj part41a.obj part41b.obj \
+ ctype1.obj initvar1.obj myalloc.obj mylibc.obj 
