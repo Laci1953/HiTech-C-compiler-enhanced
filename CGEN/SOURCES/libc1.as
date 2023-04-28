@@ -247,14 +247,10 @@ loc_6D16:
 	global	_printf
 	global	__doprnt
 	global	__iob
-global cntx
-cntx:defb 0
+
 	psect	text
 _printf:
 	call csv
-ld a,(cntx)
-inc a
-ld (cntx),a
 	push	ix
 	pop	de
 	ld	hl,8
