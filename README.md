@@ -30,7 +30,7 @@ The following components were modified:
 - OPTIM.COM
 - ZAS.COM (starting from the Hector Peraza’s ZSM4 published on GitHub)
 
-The included files are built to be used on Z80 sytems provided with SC108 (128KB RAM) or 512KB RAM modules hardware configuration.
+The included files are built to be used on Z80 sytems provided with 128KB RAM or 512KB RAM modules hardware configuration.
 
 The resulting C toolset can be customized to be used on any available 128KB RAM / 512KB RAM Z80 hardware system configuration ( RC2014 provided with SC108, SC114, SC118, SC150, SC152 or the Phillip Stevens memory module, or the 512KB RAM + 512KB ROM module, or Z80ALL (which has 4 x 32KB RAM)).
 
