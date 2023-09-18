@@ -24,7 +24,7 @@ Obviously, this means some extra code is executed, compared to the "original" Hi
 
 However, this loss of speed ( 10 to 15% ) is largely compensated by the big advantage obtained: to be able to compile larger C source files.
 
-Benefiting from the high quality work of Andrey Nikitin and Mark Ogden, who published the decompiled C sources of HiTech C compiler's toolset on GitHub, I modified these source files to implement this ideea of a enhanced C compiler.
+Benefiting from the high quality work of Andrey Nikitin and Mark Ogden, who published the decompiled C sources of HiTech C compiler's toolset on GitHub, I modified these source files to implement this concept of a enhanced C compiler.
 
 The following components were modified:
 
@@ -41,14 +41,10 @@ The resulting C toolset can used on any available 128KB RAM / 512KB RAM Z80 hard
 - RCBUS-based systems provided with SC707, SC714, or
 - Z80ALL (which has 4 x 32KB RAM).
 
-For 128KB RAM systems, the CP/M must be setup using the PutSys from the folder PutSys. This is necessary because of the "shadow code", that must be stored to high RAM address space.
+For RC2014 or RCBUS 128KB RAM systems, the CP/M must be setup using one of the files from the folder PutSys. This is necessary because of the "shadow code", that must be stored to high RAM address space.
 
 The results are spectacular.
 
 Large C source files can now be compiled, without any problem (see the TESTS folder for some examples).
 
 The C compiler's modified source files are included.
-
-
-
-
