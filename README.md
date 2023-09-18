@@ -1,4 +1,7 @@
-# HiTech-C-compiler-enhanced - updated on April 22, 2023
+# HiTech-C-compiler-enhanced
+
+(updated on April 22, 2023)
+
 Enhancing the HiTech C compiler for 128KB RAM / 512KB RAM hardware configurations
 
 The HiTech C Compiler v3.09 is one of the best available C compilers that can be used on 8-bit CP/M 2.2 systems.
