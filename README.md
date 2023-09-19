@@ -31,7 +31,7 @@ The following components were modified:
 - P1.COM
 - CGEN.COM
 - OPTIM.COM
-- ZAS.COM (starting from the Hector Peraza’s ZSM4 published on GitHub)
+- ZAS.COM (replaced with Z80AS, made starting from the Hector Peraza’s ZSM4 published on GitHub)
 
 The included files are built to be used on Z80 sytems provided with 128KB RAM or 512KB RAM modules hardware configuration.
 
