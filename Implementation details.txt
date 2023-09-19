@@ -3,7 +3,7 @@ Hardware requirements
 
 The improved HiTech C compiler works on any Z80-based system provided with one of the following RAM modules:
 
-- 128 KB RAM (2 x 64KB : SC108, SC114, SC118, SC150, SC152 or the Phillip Stevens’s memory module, or 4 x 32KB : Bill Shen's Z80ALL)
+- 128 KB RAM (2 x 64KB : SC108, SC114, SC118, SC150, SC152 or the Phillip Stevens’s memory module, or RCBUS-based systems provided with SC707, SC714, or 4 x 32KB : Bill Shen's Z80ALL)
 
 - 512 KB RAM (512 KB RAM + 512 KB ROM Spencer Owen’s module)
 
