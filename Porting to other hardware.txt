@@ -1,6 +1,27 @@
 The enhanced set of tools can be used on any available 128KB RAM / 512KB RAM Z80 hardware system configuration:
 
-RC2014 provided with SC108, SC114, SC118, SC150, SC152 or the Phillip Stevens memory module, or the 512KB RAM + 512KB ROM module, or
-RCBUS-based systems provided with SC707, SC714, or
-Z80ALL (which has 4 x 32KB RAM).
+-RC2014 provided with SC108, SC114, SC118, SC150, SC152 or the Phillip Stevens memory module, or the 512KB RAM + 512KB ROM module, or
+-RCBUS-based systems provided with SC707, SC714, or
+-Z80ALL (which has 4 x 32KB RAM).
 
+In case your Z80-based computer is provided with another kind of hardware, the enhanced HiTech C compiler toolset could still be used, if the available RAM size exeeds 64KB. This RAM must be a banked RAM (2 x 64KB, 4 x 32KB, 32 x 16KB, or another configuration).
+
+Here are the source files that must be changed, in order to be able to use the enhanced HiTech C compiler toolset, for such hardware configurations:
+
+-P1: p1alloc.as
+-CGEN: alloccg.as
+-OPTIM: myalloc.as
+
+?2X64K must be set equal to 1, if your RAM is 2 x 64KB
+?512K must be set equal to 1, if your RAM size is 512KB (banks nr. 32+4 to 32+4+7 are used)
+?Z80ALL must be set equal to 1, if your RAM has 4 x 32KB (banks 1 and 2 are used)
+
+The most complicated case is the 2 x 64KB configuration:
+
+-MEMP_PORT is used to select the actual 64KB bank, using the LOW_RAM and UP_RAM macros
+
+-ROM_IN and ROM_OUT macros are used to (de)select the 32KB ROM
+
+-a routine to move bytes from the first 64KB bank to the second64KB bank is used; this routine is first searched at adress 7F00H in ROM, then is searched in the Steve Cousins SCM code.
+
+Once the modifications are applied, P1, CGEN and OPTIM can be built using the SUBMIT files provided.
