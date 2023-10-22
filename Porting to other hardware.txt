@@ -26,4 +26,6 @@ The most complicated case is the 2 x 64KB configuration:
 
 -a routine to move bytes from the first 64KB bank to the second64KB bank is used; this routine is first searched at adress 7F00H in ROM, then is searched in the Steve Cousins SCM code.
 
+-a 'smaller size' CP/M must be used (https://github.com/Laci1953/RC2014-CPM/tree/main/PutSys) in order to allow moving bytes between the two 64KB RAM banks
+
 Once the modifications are applied, P1, CGEN and OPTIM can be built using the SUBMIT files provided.
