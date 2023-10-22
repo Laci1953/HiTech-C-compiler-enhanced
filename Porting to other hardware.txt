@@ -4,7 +4,9 @@ The enhanced set of tools can be used on any available 128KB RAM / 512KB RAM Z80
 -RCBUS-based systems provided with SC707, SC714, or
 -Z80ALL (which has 4 x 32KB RAM).
 
-In case your Z80-based computer is provided with another kind of hardware, the enhanced HiTech C compiler toolset could still be used, if the available RAM size exeeds 64KB. This RAM must be a banked RAM (2 x 64KB, 4 x 32KB, 32 x 16KB, or another configuration).
+In case your Z80-based computer is provided with another kind of hardware, the enhanced HiTech C compiler toolset could still be used, 
+if the available RAM size exeeds 64KB. 
+This RAM must be a banked RAM (2 x 64KB, 4 x 32KB, 32 x 16KB, or another configuration).
 
 Here are the source files that must be changed, in order to be able to use the enhanced HiTech C compiler toolset, for such hardware configurations:
 
