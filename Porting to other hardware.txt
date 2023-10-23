@@ -29,3 +29,181 @@ The most complicated case is the 2 x 64KB configuration:
 -a 'smaller size' CP/M must be used (https://github.com/Laci1953/RC2014-CPM/tree/main/PutSys) in order to allow moving bytes between the two 64KB RAM banks
 
 Once the modifications are applied, P1, CGEN and OPTIM can be built using the SUBMIT files provided.
+
+In my assembler source files that handle alloc/dealloc, for the 2 x 64KB RAM configurations, when I search at start for the routine to move bytes to the 'second' 64KB bank, I used the following code:
+
+;
+;	Store shared code to Upper & Lower RAM
+;
+;	SP must be set at top of TPA
+;
+StoreShared:
+				;move shared code to Lower RAM
+	ld	de,SHARED	;to
+	ld	hl,SHARED_START	;from
+	ld	bc,SHARED_END - SHARED_START
+	ldir
+				;move "mover" to 0A000H
+	ld	de,0A000H	;to
+	ld	hl,mover_start	;from
+	ld	bc,mover_end - mover_start
+	ldir
+	jp	0A000H		;call "mover" to store shared code to Upper RAM and return
+;
+mover_start:
+				;move shared code to Upper RAM
+	ROM_IN
+				;first search at 7F00H
+	ld	hl,7F00H
+	ld	a,(hl)
+	cp	0c3H
+	jr	nz,searchscm
+	inc	hl
+	inc	hl
+	inc	hl
+	ld	a,(hl)
+	cp	0c3H
+	jr	nz,searchscm
+				;found "mover" in CPM BOOT EPROM
+	inc	hl
+	ld	a,(hl)
+	inc	hl
+	ld	h,(hl)
+	ld	l,a		;HL=address of "move 1 byte to upper RAM" routine
+	jp	moveit
+ ;
+searchscm:
+				;search "move 1 byte to upper RAM" routine in SCM
+	ld	hl,69H
+searchjp:
+	ld	a,(hl)
+	cp	0c3H
+	jr	z,jpfound
+	inc	hl
+	jr	searchjp
+jpfound:
+	ld	b,6
+searchj7thjp:
+	inc	hl
+	inc	hl
+	inc	hl
+	ld	a,(hl)
+	cp	0c3H
+	jr	nz,searchjp
+	djnz	searchj7thjp
+	inc	hl
+	ld	e,(hl)
+	inc	hl
+	ld	d,(hl)
+	ex	de,hl
+	inc	hl
+	ld	e,(hl)
+	inc	hl
+	ld	d,(hl)
+	ex	de,hl
+	ld	bc,2bH
+	add	hl,bc
+	add	hl,bc
+	ld	e,(hl)
+	inc	hl
+	ld	d,(hl)
+	ex	de,hl		;HL=LTOUP_SCM
+moveit:				
+	push	hl
+	pop	iy		;IY=SCM function to move A --> UpperRAM in (DE)
+	ld	ix,SHARED	;from
+	ld	de,SHARED	;to
+	ld	a,SHARED_END - SHARED_START
+looptoup:
+	push	af
+	ld	a,(ix+0)
+	ld	hl,retadr - mover_start + 0A000H
+	push	hl
+	jp	(iy)
+retadr:	inc	ix
+	inc	de
+	pop	af
+	dec	a
+	jr	nz,looptoup
+	ROM_OUT
+	ret
+;
+mover_end:
+
+;-----------------------
+;	stored at 0FF63H in both Lower & Upper RAM
+;
+SHARED	equ	0FF63H
+
+SHARED_START:
+; code to ...
+;	Read one byte from Upper 64KB RAM
+;	Write one byte to Upper 64KB RAM
+;	Read one word from Upper 64KB RAM
+;	Write one word to Upper 64KB RAM
+;	Write String to Upper 64KB RAM
+;	Read String from Upper 64KB RAM
+;	get String Len from Upper 64KB RAM
+;	Read up to 256 bytes from the Upper 64KB RAM
+;	Write up to 256 bytes to the Upper 64KB RAM
+;       Zero Fill a buffer
+
+SHARED_END:			;at 0FFF6H
+
+$ReadByte 	equ	0FF63H
+$WriteByte	equ 0FF6DH
+$ReadWord	equ	0FF77H
+$WriteWord	equ	0FF83H
+$WriteString	equ	0FF8FH
+$ReadString	equ	0FFA1H
+$StringLen	equ	0FFB2H
+$ReadMem	equ	0FFC7H
+$WriteMem	equ	0FFD7H
+$FillZero	equ	0FFE7H
+--------------------
+
+Therefore, the "mover_start" routine executes at an address >= 8000H, then it calls the ROM_IN macro to "load" the ROM at 0000 - 7FFFH, (code in ROM_IN must be changed, by the way... ), 
+then notice that I search at 7F00H for as series of two JP's:
+
+JP getHiRam ;  load A <-- UpperRAM from (DE)
+JP putHiRam ;  move A --> UpperRAM to (DE)
+
+if these 2 JP's are not found, I search in SCM for the "putHiRam" routine (Steve Cousins told me the 'trick' about the 7'th JP :).
+
+The macros: (here is the version for SC108)
+
+MEMP_PORT       equ     38H
+
+;       ROM     0000 to 8000H
+;
+ROM_OUT_CMD     equ     00000001B
+ROM_IN_CMD      equ     00000000B
+LOWER_64RAM     equ     00000000B
+UPPER_64RAM     equ     10000000B
+;
+MACRO	LOW_RAM
+	ld	a,LOWER_64RAM .or. ROM_OUT_CMD
+	out	(MEMP_PORT),a
+ENDM
+
+MACRO	UP_RAM
+	ld	a,UPPER_64RAM .or. ROM_OUT_CMD
+	out	(MEMP_PORT),a	
+ENDM
+
+MACRO	ROM_IN
+	ld	a,LOWER_64RAM .or. ROM_IN_CMD
+	out	(MEMP_PORT),a
+ENDM
+
+MACRO	ROM_OUT
+	ld	a,LOWER_64RAM .or. ROM_OUT_CMD
+	out	(MEMP_PORT),a
+ENDM
+
+... should be also modified accordingly...
+
+For SC108, the "shadow" routines are stored, in both 64KB RAM banks, at top (0FF63H to 0FFF6H), and the remaining area in the second RAM bank (0000 to 0FF63H) is the area used to alloc/dealloc.
+
+So, for SC108, the CP/M code should "stop" before 0FF63H (that's why I use a "custom" CP/M, smaller than the original RC2014 CP/M, which used all the space till 0FFFFH).
+
