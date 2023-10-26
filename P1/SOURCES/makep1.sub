@@ -21,7 +21,7 @@ c -v -c -o -dMAIN p1main.c
 c -v -c p1cclass.c
 c -v -c p1op.c
 c -v -c -o p1hash.c
-c -v -c -o p1top.c
+z80as -j p1top
 z80as -j libc
 z80as p1alloc
 z80as mycrtcpm
