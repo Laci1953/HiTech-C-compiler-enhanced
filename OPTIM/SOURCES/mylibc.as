@@ -3151,6 +3151,6 @@ __fcb:          ;150h
 
 	psect	data
 
-REPT	0DD8H
+REPT	0DDCH
 	defb	0
 ENDM
