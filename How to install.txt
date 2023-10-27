@@ -54,20 +54,24 @@ The explanation for this is the fact that, although most of the C compiler memor
 
 So, why not use a "smaller" CP/M ?
 
-The only problem is how to install on the CF this smaller CP/M...
-
 Tipical case: you have a Z80 computer provided with 512KB RAM + 512KB ROM board, as SIO serial board and a 64KB CF.
 
-You must use a second Z80 computer, provided with Steve Cousins SCM, in order to be able to copy the smaller CP/M to the CF.
+How to install on the CF this smaller CP/M ?
 
+There are two ways to do this.
+
+a) use a second Z80 computer provided with Steve Cousins SCM, in order to be able to copy the smaller CP/M to the CF.
 On this second Z80 computer, you need to insert the CF from the 512KB RAM computer, then paste the SIO_PutSys_CF64_CPM_DA00H.hex file
 (from https://github.com/Laci1953/RC2014-CPM/tree/main/PutSys),
 to the terminal, then:
 *g8000<CR>
-
 Now, the CF contains the smaller CP/M, so inserting it to the 512KB RAM computer and booting-it, the smaller CP/M will be loaded and executed.
 
-However, for Z80 computers provided with 512KB RAM and 128MB CF, this is not feasable (you will need to use the original CP/M)
+b) write a CP/M program that reads the PutSys HEX file at 8000H and executes-it; the "new CP/M" will overwrite the one present on the CF...
+
+BUT...
+
+However, for Z80 computers provided with 512KB RAM and 128MB CF, this procedure does not add any benefit.
 
 This is because the gain in TPA space was obtained, for the smaller CP/M, at the BIOS level, by dropping the use of interrupts for the serial and by commenting out the buffers reserved for the disks used only for 128MB CF, in case the actual CF has only 64MB. 
 
