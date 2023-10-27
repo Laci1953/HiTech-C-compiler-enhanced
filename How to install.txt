@@ -1,4 +1,4 @@
-Here are the necessary 3 steps:
+Here are the necessary 3 steps, depending on your specific Z80 computer's hardware:
 
 1. The boot (E)EPROM
 
