@@ -50,13 +50,18 @@ Large C source files can now be compiled, without any problem (see the TESTS fol
 
 The C compiler's modified source files are included.
 
-To implement on your computer the enhanced HiTech C, you need to copy the appropriate .HEX files (according to your hardware), here I will use the "generic" names, then:
+To implement on your computer the enhanced HiTech C, you need to copy the appropriate .HEX files (according to your hardware), here I will use the "generic" names, then execute:
 
  LOAD CPP
+
  LOAD P1
+
  LOAD CGEN
+
  LOAD OPTIM
+
  LOAD Z80AS
+ 
  PIP ZAS.COM=Z80AS.COM
 
 
