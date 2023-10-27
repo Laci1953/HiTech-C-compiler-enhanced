@@ -9,7 +9,7 @@ For computers provided with 512KB RAM, you need to boot CP/M at power ON, in ord
 Running CP/M from ROMWBW will not allow the enhanced HiTech C compiler to be executed !
 
 Choose the appropriate .hex file (according to your RC2014's serial type & CF size), and burn-it to an (E)EPROM, then insert the EPROM to your 512KB RAM + 512KB ROM board.
-Example: you have a Z80 computer with an ACIA serial and 64MB CF. You will choose the CPM_boot_512_ACIA_CF64.hex file.
+Example: you have a Z80 computer with 512KB RAM, an ACIA serial and 64MB CF. You will choose the CPM_boot_512_ACIA_CF64.hex file.
 Now, at power ON, the CP/M directly boots.
 
 2. The smaller CP/M (for 128KB RAM Z80 computers)
