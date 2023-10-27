@@ -52,11 +52,11 @@ The C compiler's modified source files are included.
 
 To implement on your computer the enhanced HiTech C, you need to copy the appropriate .HEX files (according to your hardware), here I will use the "generic" names, then:
 
- >LOAD CPP
- >LOAD P1
- >LOAD CGEN
- >LOAD OPTIM
- >LOAD Z80AS
- >PIP ZAS.COM=Z80AS.COM
+ LOAD CPP
+ LOAD P1
+ LOAD CGEN
+ LOAD OPTIM
+ LOAD Z80AS
+ PIP ZAS.COM=Z80AS.COM
 
 
