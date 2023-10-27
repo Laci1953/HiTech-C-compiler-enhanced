@@ -6,7 +6,7 @@ This is a mandatory step only for computers provided with the 512KB ROM + 512KB 
 (For computers provided with Steve Cousins SCM, e.g. SC108, this step is not mandatory, you can boot CP/M from SCM, so go to step 2)
 
 For computers provided with 512KB RAM, you need to boot CP/M at power ON, in order to use the enhanced HiTech C compiler.
-Running CP/M from ROMWBW will not allow the enhanced HiTech C compiler to be executed !
+Why? Running CP/M from ROMWBW will not allow the enhanced HiTech C compiler to be executed !
 
 Choose the appropriate .hex file (according to your RC2014's serial type & CF size), and burn-it to an (E)EPROM, then insert the EPROM to your 512KB RAM + 512KB ROM board.
 Example: you have a Z80 computer with 512KB RAM, an ACIA serial and 64MB CF. You will choose the CPM_boot_512_ACIA_CF64.hex file.
@@ -17,8 +17,10 @@ Now, at power ON, the CP/M directly boots.
 This step is mandatory only for 128KB RAM computers.
 (For computers provided with 512KB RAM + 512KB ROM boards, you may use the "original" CP/M, go to step 3, but read also the final NOTE)
 
+Why is this needed? The RC2014 "original" CP/M is too "fat", it consumes all the RAM space till 0FFFFH, and because of that, there is no space, at the top of RAM memory, to store the "shadow" routines, needed to move bytes between the two 64KB RAM banks.
+
 To change your CP/M with the smaller CP/M, to be able to run the enhanced HiTech C for 128KB RAM Z80 computers, you need to 
-paste on the terminal the appropriate .hex file.
+paste on the terminal the appropriate .hex file, from https://github.com/Laci1953/RC2014-CPM/tree/main/PutSys.
 Example: you have an 128KB RAM Z80 computer with an ACIA serial and 64MB CF. You will choose the ACIA_PutSys_CF64_CPM_DA00H.hex file.
 
 Then:
