@@ -28,6 +28,7 @@ Benefiting from the high quality work of Andrey Nikitin and Mark Ogden, who publ
 
 The following components were modified:
 
+- CPP.COM
 - P1.COM
 - CGEN.COM
 - OPTIM.COM
@@ -48,3 +49,14 @@ The results are spectacular.
 Large C source files can now be compiled, without any problem (see the TESTS folder for some examples).
 
 The C compiler's modified source files are included.
+
+To implement on your computer the enhanced HiTech C, you need to copy the appropriate .HEX files (according to your hardware), here I will use the "generic" names, then:
+
+>LOAD CPP
+>LOAD P1
+>LOAD CGEN
+>LOAD OPTIM
+>LOAD Z80AS
+>PIP ZAS.COM=Z80AS.COM
+
+
