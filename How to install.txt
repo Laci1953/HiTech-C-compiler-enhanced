@@ -47,7 +47,7 @@ NOTE
 For Z80 computers provided with 512KB RAM and 64MB CF, although the "original" CP/M may be used, 
 I highly recommend to change-it with the smaller CP/M contained here https://github.com/Laci1953/RC2014-CPM/tree/main/PutSys
 
-The reason is the gain of 2KB and a half TPA space, which is not negligeable when compiling large C files.
+The reason is the gain of 2 and a half KB TPA space, which is not negligeable when compiling large C files.
 The explanation for this is the fact that, although most of the C compiler memory allocations are done in the "extra" RAM space, there are also some structures allocated in the main 64KB RAM space (the high part of the TPA). This could prove vital in certain cases.
 
 So, why not use a "smaller" CP/M ?
