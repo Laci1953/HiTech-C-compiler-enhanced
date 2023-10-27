@@ -15,7 +15,7 @@ Now, at power ON, the CP/M directly boots.
 2. The smaller CP/M (for 128KB RAM Z80 computers)
 
 This step is mandatory only for 128KB RAM computers.
-(For computers provided with 512KB RAM + 512KB ROM boards, you may use the "original" CP/M, go to step 3)
+(For computers provided with 512KB RAM + 512KB ROM boards, you may use the "original" CP/M, go to step 3, but read also the final NOTE)
 
 To change your CP/M with the smaller CP/M, to be able to run the enhanced HiTech C for 128KB RAM Z80 computers, you need to 
 paste on the terminal the appropriate .hex file.
