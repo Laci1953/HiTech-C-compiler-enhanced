@@ -5,6 +5,9 @@ Here are the necessary 3 steps:
 This is a mandatory step only for computers provided with the 512KB ROM + 512KB RAM board.
 (For computers provided with Steve Cousins SCM, e.g. SC108, this step is not mandatory, you can boot CP/M from SCM, so go to step 2)
 
+You need to boot CP/M at power ON, in order to use the enhanced HiTech C compiler.
+Running CP/M from ROMWBW will not allow the enhanced HiTech C compiler to be executed !
+
 Choose the appropriate .hex file (according to your RC2014's serial type & CF size), and burn-it to an (E)EPROM, then insert the EPROM to your 512KB RAM + 512KB ROM board.
 Example: you have a Z80 computer with an ACIA serial and 64MB CF. You will choose the CPM_boot_512_ACIA_CF64.hex file.
 Now, at power ON, the CP/M directly boots.
