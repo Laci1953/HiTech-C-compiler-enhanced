@@ -1,13 +1,18 @@
-1. The boot ROM
+Here are the necessary 3 steps:
+
+1. The boot (E)EPROM
 
 This is a mandatory step only for computers provided with the 512KB ROM + 512KB RAM board.
-(For computers provided with Steve Cousins SCM, e.g. SC108, this step is not mandatory, you can boot CP/M from SCM)
+(For computers provided with Steve Cousins SCM, e.g. SC108, this step is not mandatory, you can boot CP/M from SCM, so go to step 2)
 
-Choose the appropriate .hex file (according to your RC2014's serial type & CF size), and burn-it to an (E)EPROM, insert the EPROM to your board.
+Choose the appropriate .hex file (according to your RC2014's serial type & CF size), and burn-it to an (E)EPROM, then insert the EPROM to your 512KB RAM + 512KB ROM board.
 Example: you have a Z80 computer with an ACIA serial and 64MB CF. You will choose the ACIA_PutSys_CF64_CPM_DA00H.hex file.
 Now, at power ON, the CP/M directly boots.
 
 2. The smaller CP/M (for 128KB RAM Z80 computers)
+
+This step is mandatory only for 128KB RAM computers.
+(For computers provided with 512KB RAM + 512KB ROM boards, go to step 3)
 
 To change your CP/M with the smaller CP/M, to be able to run the enhanced HiTech C for 128KB RAM Z80 computers, 
 (let's say you have a SC108, running SCM, and you want to store the smaller CP/M on a 512KB RAM Z80 computer provided with ACIA and 64MB CF)
@@ -19,7 +24,8 @@ On the SC108 computer, insert in the CF board the CF to be used on the 512KB RAM
 Now, the CF contains a CP/M to be used on your 512KB RAM computer, you will need to move the CF on that machine.
 
 3. The enhanced HiTech C
-------------------------------------------
+
+This step is mandatory for all computers.
 
 To implement on your computer the enhanced HiTech C, you need to copy the appropriate .HEX files (according to your hardware), here I will use the "generic" names, then execute:
 
