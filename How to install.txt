@@ -65,3 +65,4 @@ to the terminal, then:
 
 Now, the CF contains the smaller CP/M, so inserting it to the 512KB RAM computer and booting-it, the smaller CP/M will be loaded and executed.
 
+However, for Z80 computers provided with 512KB RAM and 128MB CF, this is not feasable (you will need to use the original CP/M, because the gain in TPA space was obtained, for the 64MB CF, by commenting out the buffers reserved for the extra disks used for 128MB CF).
