@@ -1,6 +1,6 @@
 # HiTech-C-compiler-enhanced
 
-(updated on April 22, 2023)
+(updated on October 27, 2023)
 
 Enhancing the HiTech C compiler for 128KB RAM / 512KB RAM hardware configurations
 
