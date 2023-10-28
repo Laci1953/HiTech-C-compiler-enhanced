@@ -17,7 +17,7 @@ c -v -c -o main.c
 c -v -c -o getchar.c
 c -v -c setup.c
 c -v -c ctype.c
-c -v -c -o cgentop.c
+z80as cgentop.as
 z80as alloccg.as
 z80as zcrtcpm.as
 z80as -j libc1.as
