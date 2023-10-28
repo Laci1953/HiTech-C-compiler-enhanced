@@ -24,7 +24,7 @@ The most complicated case is the 2 x 64KB configuration:
 
 -ROM_IN and ROM_OUT macros are used to (de)select the 32KB ROM
 
--a routine to move bytes from the first 64KB bank to the second64KB bank is used; this routine is first searched at adress 7F00H in ROM, then is searched in the Steve Cousins SCM code.
+-a routine to move bytes from the first 64KB bank to the second64KB bank is used; this routine is first searched at adress 7F00H in ROM, then is searched in the Steve Cousins SCM code. Thanks to the efforts made by Steve Cousins to keep SCM code architecture stable over all its versions, this routine can be found, using a standard procedure, no matter of the current SCM version. I used the 7F00H address to search for this routine as a last-resort alternative, e.g. a 32 KB ROM being used only to boot CP/M at power-up, containing also at its high-address area the small routine placed at 7F00H (which is exactly how are configurem my BOOT EPROM's in )
 
 -a 'smaller size' CP/M must be used (https://github.com/Laci1953/RC2014-CPM/tree/main/PutSys) in order to allow moving bytes between the two 64KB RAM banks
 
