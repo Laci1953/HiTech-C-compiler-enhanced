@@ -1,6 +1,6 @@
 xsub
 link
--Z -X -N -Mcgen128.map -Ptext=100H,data,bss,top -C100H -Ocgen128.COM \
+-Ptext=100H,data,bss,top -C100H -Ocgennew.COM \
  zcrtcpm.obj \
  data.obj \
  lex1.obj \
