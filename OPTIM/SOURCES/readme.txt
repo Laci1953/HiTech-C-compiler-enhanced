@@ -1,5 +1,7 @@
 How to compile / assemble the source files
 
+Edit myalloc.as & optim1.h to choose the target hardware.
+
 1. >submit makeopt
 
 2. >submit linkopt
