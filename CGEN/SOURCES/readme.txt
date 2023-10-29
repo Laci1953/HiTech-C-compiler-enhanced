@@ -1,5 +1,7 @@
 How to compile / assemble the source files
 
+Edit alloccg.as to choose the target hardware.
+
 First, compile cgentop.c to obtain cgentop.as
 >C -v -o -s cgentop.c
 
