@@ -1,5 +1,7 @@
 How to compile / assemble the source files
 
+Edit p1alloc.as & p1.h to choose the target hardware.
+
 First, compile p1top.c to obtain p1top.as
 >C -v -o -s p1top.c
 
