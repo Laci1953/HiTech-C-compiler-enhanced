@@ -142,16 +142,16 @@ $FillZero	equ	0FFE7H
 
 ELSE
 
-$ReadByte 	equ 	0FF00H
-$WriteByte	equ 	0FF11H
-$ReadWord	equ 	0FF22H
-$WriteWord	equ 	0FF35H
-$WriteString	equ 	0FF48h
-$ReadString	equ 	0FF61H
-$StringLen	equ	0FF79H
-$ReadMem	equ	0FFACH
-$WriteMem	equ	0FFD7H
-$FillZero	equ	0FFC3H
+$ReadByte	equ        0FF00H
+$WriteByte	equ        0FF11H
+$ReadWord	equ        0FF22H
+$WriteWord	equ        0FF35H
+$WriteString	equ        0FF48h
+$ReadString	equ        0FF61H
+$StringLen	equ        0FF79H
+$ReadMem        equ        0FF95H
+$WriteMem       equ        0FFACH
+$FillZero       equ        0FFC3H
 
 ENDIF
 
