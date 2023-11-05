@@ -157,7 +157,7 @@ void parseMembers(int p1) {
         l5 = getToken();
         if (*l5 == ']')
             break;
-        sb          = (member_t *)MyAllocMbr()); /* allocMem(sizeof(member_t)); */ /* Create member_t */
+        sb          = (member_t *)MyAllocMbr(); /* allocMem(sizeof(member_t)); */ /* Create member_t */
         /* sb->b_class = MEMBER; */
 	PutByte((char*)sb, OFF_b_class, MEMBER);
 
