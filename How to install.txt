@@ -37,7 +37,7 @@ This step is mandatory for all computers.
 To implement on your computer the enhanced HiTech C, you need to copy the appropriate .HEX files (according to your hardware):
 
 *128.HEX = for SC108 & compatibles
-*114.HEX = for SC114, Phillip Stevens Memory Module & compatibles
+*114.HEX = for SC114 or systems using Phillip Stevens Memory Module & compatibles
 *512.HEX = for 512KB RAM systems
 *Z80ALL.HEX = for Z80ALL
 *S80.HEX = for Simple80
