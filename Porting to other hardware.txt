@@ -208,3 +208,11 @@ For SC108, the "shadow" routines are stored, in both 64KB RAM banks, at top (0FF
 
 So, for SC108, the CP/M code should "stop" before 0FF63H (that's why I use a "custom" CP/M, smaller than the original RC2014 CP/M, which used all the space till 0FFFFH).
 
+Note
+----
+
+Depending on the specific hardware, it is posible to setup the "shadow" routines in very simple ways.
+
+Example: On Simple80, at start-up, the EPROM monitor stores the "shadow" routines to both 64KB RAM banks, just on top of the CP/M BIOS area.
+Therefore, each CP/M executable may freely access these routines.
+
