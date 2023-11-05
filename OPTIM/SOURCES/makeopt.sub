@@ -1,5 +1,6 @@
 c -v -c ctype1.c
 c -v -c initvar1.c
+c -v -c -o optim1a.c
 c -v -c -o optim1b.c
 c -v -c -o optim1c.c
 c -v -c -o optim1d.c
