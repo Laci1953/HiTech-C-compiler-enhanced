@@ -1,5 +1,7 @@
 Here are the necessary 3 steps, depending on your specific Z80 computer's hardware:
 
+0. For Z80ALL and Simple80, go to step 3.
+
 1. The boot (E)EPROM
 
 This is a mandatory step only for computers provided with the 512KB ROM + 512KB RAM board.
@@ -38,6 +40,7 @@ To implement on your computer the enhanced HiTech C, you need to copy the approp
 *114.HEX = for SC114, Phillip Stevens Memory Module & compatibles
 *512.HEX = for 512KB RAM systems
 *Z80ALL.HEX = for Z80ALL
+*S80.HEX = for Simple80
 
 , then execute ( using the "generic" names ):
 
