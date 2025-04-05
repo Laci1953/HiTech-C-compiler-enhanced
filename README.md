@@ -2,7 +2,7 @@
 
 (update on April, 5, 2025)
 
-The RomWBW version is now available. You will need RonWBW v 3.5 (or later).
+The RomWBW version is now available. You will need RomWBW v 3.5 (or later).
 
 (updated on November 5, 2023)
 
