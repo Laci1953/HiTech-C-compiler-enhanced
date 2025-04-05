@@ -1,5 +1,9 @@
 # HiTech-C-compiler-enhanced
 
+(update on April, 5, 2025)
+
+The RomWBW version is now available. You will need RonWBW v 3.5 (or later).
+
 (updated on November 5, 2023)
 
 Enhancing the HiTech C compiler for 128KB RAM / 512KB RAM hardware configurations
