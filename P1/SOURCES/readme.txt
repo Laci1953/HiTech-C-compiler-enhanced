@@ -2,6 +2,8 @@ How to compile / assemble the source files
 
 Edit p1alloc.as & p1.h to choose the target hardware.
 
+For ROMWBW, use p1allwbw.as(obj) instead of p1alloc.as(obj) in the make file ( and link file).
+
 First, compile p1top.c to obtain p1top.as
 >C -v -o -s p1top.c
 
