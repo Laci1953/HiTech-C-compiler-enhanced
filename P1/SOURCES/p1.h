@@ -5,7 +5,7 @@
 *	   December 2022 - March 2023		      *
 ******************************************************/
 
-//	undef for 512KB or Z80ALL
+//	undef for 512KB or Z80ALL or ROMWBW
 #define M2X64K	1	
 
 #include "cclass.h"
