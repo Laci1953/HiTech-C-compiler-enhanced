@@ -1049,7 +1049,7 @@ __alloc:
 	ld	a,e
 	xor	(hl)
 	ld	e,a
-	inc	l
+	inc	hl
 	ld	a,d
 	xor	(hl)
 	ld	d,a		;DE = ElementBuddy = Element XOR Buddy_XOR_Mask
