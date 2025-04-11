@@ -41,6 +41,7 @@ To implement on your computer the enhanced HiTech C, you need to copy the approp
 *512.HEX = for 512KB RAM systems
 *Z80ALL.HEX = for Z80ALL
 *S80.HEX = for Simple80
+*WBW.HEX = foe RomWBW
 
 , then execute ( using the "generic" names ):
 
