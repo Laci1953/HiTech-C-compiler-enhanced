@@ -1,6 +1,6 @@
 # HiTech-C-compiler-enhanced
 
-(update on April, 5, 2025)
+(update on April, 22, 2025)
 
 The RomWBW version is now available. You will need RomWBW v 3.5 (or later).
 
