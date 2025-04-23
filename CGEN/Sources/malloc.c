@@ -1,8 +1,5 @@
 /******************************************************
 *     Decompiled by Mark Ogden & Andrey Nikitin       *
-* Adapted to 128/512KB systems by Ladislau Szilagyi   *
-*		ladislau_szilagyi@yahoo.com	      *
-*	   December 2022 - April 2025		      *
 ******************************************************/
 
 #include "stdlib.h"
