@@ -1,4 +1,7 @@
 # HiTech-C-compiler-enhanced
+(updete on May 13, 2025)
+
+Fixed a bug in CGEN (related to float type variables)
 
 (update on April, 22, 2025)
 
