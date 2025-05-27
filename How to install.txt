@@ -50,6 +50,9 @@ LOAD P1
 LOAD CGEN
 LOAD OPTIM
 LOAD Z80AS
+
+if ZAS.HEX is provided (as in the RomWBW case), just LOAD-it,
+else
 PIP ZAS.COM=Z80AS.COM
 
 Now, you have the enhanced HiTech C installed.
