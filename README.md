@@ -1,5 +1,9 @@
 # HiTech-C-compiler-enhanced
-(updete on May 13, 2025)
+(update on May 27, 2025)
+
+New version - significant increase on the size of C files that can be compiled
+
+(update on May 13, 2025)
 
 Fixed a bug in CGEN (related to float type variables)
 
