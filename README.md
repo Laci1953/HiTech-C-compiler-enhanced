@@ -1,18 +1,4 @@
 # HiTech-C-compiler-enhanced
-(update on May 27, 2025)
-
-New version - significant increase on the size of C files that can be compiled
-
-(update on May 13, 2025)
-
-Fixed a bug in CGEN (related to float type variables)
-
-(update on April, 22, 2025)
-
-The RomWBW version is now available. You will need RomWBW v 3.5 (or later).
-
-(updated on November 5, 2023)
-
 Enhancing the HiTech C compiler for 128KB RAM / 512KB RAM hardware configurations
 
 The HiTech C Compiler v3.09 is one of the best available C compilers that can be used on 8-bit CP/M 2.2 systems.
@@ -65,5 +51,15 @@ The C compiler's modified source files are included.
 
 See "How to install.txt" for the enhanced HiTech C detailed installation procedure
 
+(update on April, 2025)
 
+The RomWBW version is now available. You will need RomWBW v 3.5 (or later).
+
+(update on May 13, 2025)
+
+Fixed a bug in CGEN (related to float type variables)
+
+(update on May 27, 2025)
+
+New version - significant increase on the size of C files that can be compiled
 
