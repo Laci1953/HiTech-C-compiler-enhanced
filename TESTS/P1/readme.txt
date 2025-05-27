@@ -1,5 +1,6 @@
 The original P1 sources
-Compiles on Z80 based CP/M
+
+Compiles on 128KB/512KB RAM Z80 based CP/M computers 
 
 c>c -v -o p1new.c
 HI-TECH C COMPILER (CP/M-80) V3.09
