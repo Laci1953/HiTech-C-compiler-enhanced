@@ -70,4 +70,5 @@ And those are huge files.
 For example, the CGEN source code, as a C file, has 168KB ( over 5000 lines ), 
 and the Z80 assembler source file generated during the compilation process has 241KB ( over 23000 lines ).
 
-See the folder
+See the folder TESTS.
+
