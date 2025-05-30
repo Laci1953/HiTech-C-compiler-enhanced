@@ -63,3 +63,11 @@ Fixed a bug in CGEN (related to float type variables)
 
 New version - significant increase on the size of C files that can be compiled
 
+It is possible now to compile all the HiTech C toolchain components (P1, CGEN and OPTIM), each of them represented as a single file!
+
+And those are huge files.
+
+For example, the CGEN source code, as a C file, has 168KB ( over 5000 lines ), 
+and the Z80 assembler source file generated during the compilation process has 241KB ( over 23000 lines ).
+
+See the folder
