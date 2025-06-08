@@ -1,6 +1,6 @@
 Enhanced ZAS, for Z80 systems provided with 128/512KB RAM (including RomWBW systems), used by the HiTech C compiler.
 
-The labels are now stored to the extended RAM.
+The labels are now stored in the extended RAM.
 
 IMPORTANT NOTE:
 
