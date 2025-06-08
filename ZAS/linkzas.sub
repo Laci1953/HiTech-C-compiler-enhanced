@@ -1,0 +1,6 @@
+xsub
+link
+ -X -N -Z -ptext=100H,data,top=7800H,bss,ttop -c100h -ozasnew.com -mzas.map \
+ mycrtcpm.obj code.obj cclass.obj expr.obj lex.obj main.obj maintop.obj \
+ kwd.obj parse.obj sym.obj tlab.obj stdclean.obj freopen.obj myalloc.obj \
+ libc.lib libf.lib

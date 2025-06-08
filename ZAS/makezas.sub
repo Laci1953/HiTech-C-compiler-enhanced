@@ -1,0 +1,24 @@
+c -v -c cclass.c 
+c -v -c -o -s code.c 
+c -v -c -o -s expr.c 
+c -v -c -o -s lex.c 
+c -v -c -o -s main.c 
+c -v -c -o -s kwd.c 
+c -v -c -o -s parse.c 
+c -v -c -o -s sym.c 
+c -v -c -o -s tlab.c 
+c -v -c -o -s stdclean.c
+c -v -c -o -s freopen.c
+z80as -j -d code 
+z80as -j -d expr 
+z80as -j -d lex 
+z80as -j -d main 
+z80as -j -d kwd 
+z80as -j -d parse 
+z80as -j -d sym 
+z80as -j -d tlab 
+z80as -j -d stdclean
+z80as -j -d freopen
+z80as -d myalloc
+z80as -d mycrtcpm
+z80as -d maintop
