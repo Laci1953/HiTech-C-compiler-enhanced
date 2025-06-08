@@ -31,8 +31,6 @@ The following components were modified:
 - OPTIM.COM
 - ZAS.COM
 
-The included files are built to be used on Z80 sytems provided with 128KB RAM or 512KB RAM modules hardware configuration.
-
 The resulting C toolset can be used on any available 128KB RAM / 512KB RAM Z80 hardware system configuration:
 
 - RC2014 provided with SC108, SC114, SC118, SC150, SC152 or the Phillip Stevens memory module, or the 512KB RAM + 512KB ROM module, or
@@ -75,6 +73,4 @@ See the folder TESTS.
 (update on June 8, 2025)
 
 New version of ZAS - significant increase on the size of assembler files that can be assembled.
-
-
 
