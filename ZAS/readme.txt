@@ -19,5 +19,5 @@ Enhanced ZAS:
 
 Z80AS:
 - runs on any Z80 CP/M system
-- macros, conditional assembly may be used
+- macros, conditional assembly, includes may be used
 - may handle undocumented Z80 instructions
