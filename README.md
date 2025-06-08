@@ -29,7 +29,7 @@ The following components were modified:
 - P1.COM
 - CGEN.COM
 - OPTIM.COM
-- ZAS.COM (replaced with Z80AS, made starting from the Hector Peraza’s ZSM4 published on GitHub)
+- ZAS.COM
 
 The included files are built to be used on Z80 sytems provided with 128KB RAM or 512KB RAM modules hardware configuration.
 
@@ -71,4 +71,10 @@ For example, the CGEN source code, as a C file, has 168KB ( over 5000 lines ),
 and the Z80 assembler source file generated during the compilation process has 241KB ( over 23000 lines ).
 
 See the folder TESTS.
+
+(update on June 8, 2025)
+
+New version of ZAS - significant increase on the size of assembler files that can be assembled.
+
+
 
