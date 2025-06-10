@@ -27,6 +27,10 @@
  * Early work on the decompilation was done by Andrey Nikitin
  * Completion of the work and porting to work under modern compilers done by Mark Ogden
  * 19-May-2022
+ *
+ * Modified to allocate labels in the extended 128/512 KB RAM
+ * by Ladislau Szilagyi, June 2025
+ *
  */
 #include "zas.h"
 
