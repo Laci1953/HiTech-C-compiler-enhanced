@@ -76,3 +76,6 @@ See the folder TESTS.
 
 New version of ZAS - significant increase on the size of assembler files that can be assembled.
 
+This new ZAS version can process assembler source files containing up to 1300 labels.
+
+
