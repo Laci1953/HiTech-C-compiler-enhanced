@@ -31,7 +31,9 @@ The following components were modified:
 - OPTIM.COM
 - ZAS.COM
 
-The resulting C toolset can be used on any available 128KB RAM / 512KB RAM Z80 hardware system configuration:
+Each of these components has its own folder, containing the sources and the executables.
+
+The resulting C toolset can be used on the following 128KB RAM / 512KB RAM Z80 hardware system configurations:
 
 - RC2014 provided with SC108, SC114, SC118, SC150, SC152 or the Phillip Stevens memory module, or the 512KB RAM + 512KB ROM module, or
 - RCBUS-based systems provided with SC707, SC714, or
