@@ -15,7 +15,7 @@ Enhanced ZAS:
 - runs ONLY on 128/512KB RAM systems (including RomWBW systems, starting from v3.5)
 - it is called by the C compiler to assemble the output of CGEN (or OPTIM)
 - no macros, include, conditional assembly
-- can handle larger assembler files, compared with Z80AS
+- can handle larger assembler files, compared with the original HiTech's ZAS or even Z80AS
 
 Z80AS:
 - runs on any Z80 CP/M system
