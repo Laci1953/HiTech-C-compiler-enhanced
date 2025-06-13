@@ -6,8 +6,16 @@ IMPORTANT NOTE:
 
 This enhanced version of ZAS must be used ONLY when called from the C compiler (after CPP, P1, CGEN and OPTIM)
 
+It accepts only the following command line options:
+
+c>zas -otest.obj test.as
+or
+c>zas -j -otest.obj test.as
+or
+c>zas -j -n -otest.obj test.as
+
 To assemble Z80 source files, outside the framework provided by the C compiler, 
-you may still use Z80AS ( https://github.com/Laci1953/Z80AS ).
+you may still use the original ZAS or Z80AS ( https://github.com/Laci1953/Z80AS ).
 
 Comparing the enhanced ZAS with the original ZAS and Z80AS:
 
